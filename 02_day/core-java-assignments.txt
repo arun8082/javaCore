@@ -1,0 +1,67 @@
+Day 2
+
+1. Solve Tank assignment along with memory picture.
+
+class Tank {
+  private int level;
+  Tank(int l)
+   {
+     level=l;
+   }
+  public void setLevel(int level1)
+  {
+    level=level1;
+  }
+  public int getLevel()
+  {
+    return level;
+  }
+}	
+
+public class Assignment {
+  public static void main(String[] args) {
+    Tank t1 = new Tank(10);
+    Tank t2 = new Tank(20);
+   
+    s.o.p("1: t1.level: " + t1.getLevel() +
+          ", t2.level: " + t2.getLevel());
+    t1 = t2;
+    s.o.p("2: t1.level: " + t1.getLevel() +
+          ", t2.level: " + t2.getLevel());
+    t1.setLevel(27);
+     s.o.p("3: t1.level: " + t1.getLevel() +
+          ", t2.level: " + t2.getLevel());
+    t2.setLevel(t1.getLevel()+10);
+     s.o.p("4: t1.level: " + t1.getLevel() +
+          ", t2.level: " + t2.getLevel());
+  }
+}
+
+
+2. Create java application for the following.
+Create Student class in a package "com.cdac.core" 
+2.1 Every student must have   --- id(int) --if possible system generated(think!!!), name (String), email(String), age(int), gpa (double)
+
+2.2 Add suitable parameterized constructor.
+Don't accept gpa in constructor , since it has to be computed.
+
+2.3 Add a method getDetails to  fetch student details
+(ret type -- String)
+
+2.4  Add computeGPA method in Student class
+Accept 3 scores for quiz , test & assignments
+GPA should be computed on 20 % of quiz score, 50% of test score & 30% of assignment score.
+
+3 Write a TestStudents class in "com.tester" package , to accept 2 student details(w/o gpa)
+Compute GPAs by passing scores.
+Display name of student having higher GPA.
+
+OPTIONAL
+4. Write a TestStudents2 class in "com.tester" package.
+Accept how many students in the class from user.
+ 
+ Accept student details(w/o gpa)
+Accept student scores & compute GPAs .
+Display name of student having highest GPA.
+
+

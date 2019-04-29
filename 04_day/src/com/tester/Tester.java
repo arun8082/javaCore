@@ -11,7 +11,7 @@ public class Tester {
 	public static void main(String[] args) {
 		int idCounter = 0;
 		Scanner scan = new Scanner(System.in);
-		System.out.print("How many rRecords you want to inster: ");
+		System.out.print("How many Records you want to inster: ");
 		int noOfRecords = 4;// scan.nextInt();
 		Emp eData[] = new Emp[noOfRecords];
 

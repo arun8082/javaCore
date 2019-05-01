@@ -1,0 +1,11 @@
+String to char array java - convert string to char - JournalDev
+https://www.journaldev.com › Java
+Sometimes we have to convert String to the character array in java programs or convert a string to char 
+from specific index.
+Java: Simple way to convert String to Char Array • Crunchify
+https://crunchify.com/java-simple-way-to-convert-string-to-char-array/
+Jul 17, 2017 - Java: Simple way to convert String to Char Array. package com. crunchify; public class 
+CrunchifyStringToCharArray { public static void main(String[] args) { String testString = "This Is Test"; 
+char[] stringToCharArray = testString. toCharArray(); for (char output : stringToCharArray) { System. out. 
+println(output); }
+Java String toCharArray() with example - GeeksforGeeks

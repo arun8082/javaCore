@@ -1,4 +1,4 @@
-package io.tester;
+package dis.tester;
 
 import static io.app.util.TestData.*;
 
@@ -14,12 +14,11 @@ import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-
 import io.app.core.Employee;
 
-public class WriteListData {
-
+public class WriteReadListData {
+	// DataOutputStream//binary
+	// DataIntputStream
 	public static void main(String[] args) {
 		List<Employee> list = populateList();
 		try {
@@ -41,11 +40,13 @@ public class WriteListData {
 				}
 			});
 			System.out.println("write complted\n\n");
-
+			if (dos != null)
+				dos.close();
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}
 
+		// Read file
 		try {
 			File file = new File("testFile.data");
 			DataInputStream dio = new DataInputStream(new BufferedInputStream(new FileInputStream(file)));
@@ -54,23 +55,13 @@ public class WriteListData {
 			try {
 				System.out.println("read file start");
 				while (true) {
-					System.out.println(list1.add(new Employee(
-							dio.readInt(),
-							dio.readUTF(),
-							dio.readUTF(),
-							dio.readDouble(),
-							LocalDate.parse(dio.readUTF()),
-							dio.readDouble()
-							)
-							));
-				}				
+					list1.add(new Employee(dio.readInt(), dio.readUTF(), dio.readUTF(), dio.readDouble(), LocalDate.parse(dio.readUTF()), dio.readDouble()));
+				}
 			} catch (EOFException e) {
-				System.out.println("internal try");
-				e.printStackTrace();
-				System.out.println(list1);
-				list1.forEach(i->System.out.println(i));
+
+				list1.forEach(i -> System.out.println(i));
 			}
-			
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

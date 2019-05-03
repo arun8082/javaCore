@@ -29,6 +29,9 @@ public class TestData {
 	}
 
 	public static Employee[] populateArray() {
-		return new Employee[] { new Employee(10, "abc1", "rnd", 12000, now(), 5.5), new Employee(101, "abc2", "prod", 15000, parse("2019-01-01"), 8), new Employee(45, "abc3", "rnd", 11000, of(2017, 5, 25), 7.8), new Employee(3, "abc4", "rnd", 22000, parse("2018-09-21"), 7.6) };
+		return new Employee[] { new Employee(10, "abc1", "rnd", 12000, now(), 5.5),
+				new Employee(101, "abc2", "prod", 15000, parse("2019-01-01"), 8),
+				new Employee(45, "abc3", "rnd", 11000, of(2017, 5, 25), 7.8),
+				new Employee(3, "abc4", "rnd", 22000, parse("2018-09-21"), 7.6) };
 	}
 }

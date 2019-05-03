@@ -4,14 +4,15 @@ import java.io.Serializable;
 import java.time.LocalDate;
 
 @SuppressWarnings("serial")
-public class Employee implements Serializable{
+public class Employee3 implements Serializable {
 	private int id;// unique ID
 	private String name, dept;
 	private double salary;
 	private LocalDate hireDate;
 	private double performanceIndex;
+	private transient Address3 add;
 
-	public Employee(int id, String name, String dept, double salary, LocalDate hireDate, double performanceIndex) {
+	public Employee3(int id, String name, String dept, double salary, LocalDate hireDate, double performanceIndex) {
 		super();
 		this.id = id;
 		this.name = name;
@@ -21,9 +22,13 @@ public class Employee implements Serializable{
 		this.performanceIndex = performanceIndex;
 	}
 
+	public void setAddress(String city, String state, String country) {
+		this.add = new Address3(city, state, country);
+	}
+
 	@Override
 	public String toString() {
-		return "Employee id=" + id + ", name=" + name + ", dept=" + dept + ", salary=" + salary + ", hireDate=" + hireDate + ", performanceIndex=" + performanceIndex;
+		return "Employee [id=" + id + ", name=" + name + ", dept=" + dept + ", salary=" + salary + ", hireDate=" + hireDate + ", performanceIndex=" + performanceIndex + ", add=" + add + "]";
 	}
 
 	public int getId() {
